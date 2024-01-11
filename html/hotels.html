@@ -1,0 +1,67 @@
+<div class="template">
+  <h3>Get all hotels</h3>
+  <button id="btn-reload" class="btn btn-sm btn-secondary">Reload (if you decide to cache hotels)</button>
+
+  <!-- Create Hotel Button -->
+  <button id="btn-create-hotel" class="btn btn-sm btn-primary">Create Hotel</button>
+
+  <!-- Create Hotel Form (Initially hidden) -->
+  <div id="create-hotel-form" style="display: none;">
+      <form id="hotel-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br>
+
+          <label for="street">Street:</label>
+          <input type="text" id="street" name="street" required><br>
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required><br>
+
+          <label for="zip">ZIP:</label>
+          <input type="text" id="zip" name="zip" required><br>
+
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" required><br>
+
+          <button type="button" id="btn-submit">Submit</button>
+      </form>
+  </div>
+
+  <div id="update-hotel-form" style="display: none;">
+    <form id="update-form">
+        <input type="hidden" id="update-id" name="id">
+        <label for="update-name">Name:</label>
+        <input type="text" id="update-name" name="name" required><br>
+
+        <label for="update-street">Street:</label>
+        <input type="text" id="update-street" name="street" required><br>
+
+        <label for="update-city">City:</label>
+        <input type="text" id="update-city" name="city" required><br>
+
+        <label for="update-zip">ZIP:</label>
+        <input type="text" id="update-zip" name="zip" required><br>
+
+        <label for="update-country">Country:</label>
+        <input type="text" id="update-country" name="country" required><br>
+
+        <button type="button" id="btn-update">Update</button>
+    </form>
+</div>
+  
+  <table class="table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>&nbsp;</th>
+          </tr>
+      </thead>
+      <tbody id="tbl-body">
+      </tbody>
+  </table>
+</div>
+
+<script src="../js/hotels.js"></script>
+

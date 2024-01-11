@@ -1,0 +1,71 @@
+/* Horizontal style BEGIN */
+ul.menu-horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1e3c72; /* Dark Blue */
+}
+
+ul.menu-horizontal li {
+  float: left;
+}
+
+ul.menu-horizontal li a {
+  display: block;
+  color: #ffffff; /* White */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.menu-horizontal li a:hover:not(.active) {
+  background-color: #142850; /* Darker Blue */
+}
+
+ul.menu-horizontal a.active {
+  background-color: #fca311; /* Orange */
+}
+/* Horizontal style END */
+
+/* Vertical style BEGIN */
+ul.menu-vertical {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #112d4e; /* Navy Blue */
+}
+
+ul.menu-vertical li a {
+  display: block;
+  color: #ffffff; /* White */
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.menu-vertical li a.active {
+  background-color: #fca311; /* Orange */
+  color: #ffffff; /* White */
+}
+
+ul.menu-vertical li a:hover:not(.active) {
+  background-color: #3f72af; /* Lighter Blue */
+  color: #ffffff; /* White */
+}
+/* Vertical style END */
+
+/* Simple style BEGIN */
+ul.menu-simple {
+  list-style-type: none;
+  padding: 0;
+  margin: 5;
+}
+
+ul.menu-simple li {
+  /* display block (default) --> Vertical
+     display inline --> Horizontal */
+  display: inline;
+  margin-right: 5px;
+}
+/* Simple style END */
