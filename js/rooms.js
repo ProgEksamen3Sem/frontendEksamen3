@@ -44,7 +44,10 @@ async function createRoom() {
         if (response.ok) {
             const createdRoom = await response.json();
             console.log("Room created successfully:", createdRoom);
-            // Optionally, you can update your UI or perform additional actions here
+
+            // Show a simple browser alert as a popup
+            alert("Room created successfully!");
+
         } else {
             console.error("Failed to create room. Status:", response.status);
             // Handle non-successful response (e.g., display an error message)

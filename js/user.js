@@ -21,7 +21,7 @@ async function createUser() {
         if (response.ok) {
             const createdUser = await response.json();
             console.log("User created successfully:", createdUser);
-            // Optionally, you can update your UI or perform additional actions here
+           
             alert("User created successfully!");
         } else {
             console.error("Failed to create user. Status:", response.status);

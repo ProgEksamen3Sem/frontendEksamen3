@@ -34,7 +34,7 @@ function displayHotelDetails(hotelDetails) {
   hotelNameElement.textContent = `Name: ${hotelDetails.name}`;
   hotelAddressElement.textContent = `Address: ${hotelDetails.street}, ${hotelDetails.city}`;
 
-  // You can customize this function to display details as needed
+ 
 }
 
   

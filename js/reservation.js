@@ -26,7 +26,7 @@ async function createReservation() {
         if (response.ok) {
             const createdReservation = await response.json();
             console.log("Reservation created successfully:", createdReservation);
-            // Optionally, you can update your UI or perform additional actions here
+           
             alert("Reservation created successfully!");
             loadReservations(); // Refresh the reservation list
         } else {

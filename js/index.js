@@ -8,7 +8,6 @@ import { hotels } from "./hotels/hotels.js";
 
 
 window.addEventListener("load", async () => {
-  // Add hotels template path
   const templateHotels = await loadHtml("hotels.html");
 
 

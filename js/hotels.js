@@ -24,7 +24,6 @@ async function getAndRenderHotels(url) {
   }
 }
 
-// Rest of the code remains unchanged
 
 
 function renderAllData(data) {
@@ -35,7 +34,7 @@ function renderAllData(data) {
       <td>${hotel.street}, ${hotel.city}</td>
     
       <td>
-        <button data-hotel-id="${hotel.id}" type="button" class="btn btn-sm btn-secondary">Details</button>
+        
         <button data-hotel-id="${hotel.id}" type="button" class="btn btn-sm btn-danger" onclick="deleteHotel(${hotel.id})">Delete</button>
         <button data-hotel-id="${hotel.id}" type="button" class="btn btn-sm btn-warning" onclick="showUpdateForm(${hotel.id})">Update</button>
 
@@ -76,7 +75,6 @@ function showHotelDetails(evt) {
 }
 
 function sanitizeStringWithTableRows(inputString) {
-  // You can implement sanitization logic if needed
   return inputString;
 }
 
