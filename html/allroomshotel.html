@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Display</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">Quick Booking</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <a class="nav-link" href="hotels.html">Hotel List</a>
+        </ul>
+
+        <ul class="navbar-nav">
+            <a class="nav-link" href="findhotel.html">Search Hotels by ID</a>
+        </ul>
+        <ul class="navbar-nav">
+            <a class="nav-link" href="rooms.html">Create Room</a>
+        </ul>
+        <ul class="navbar-nav">
+            <a class="nav-link" href="user.html">User Registration</a>
+        </ul>
+        <ul class="navbar-nav">
+            <a class="nav-link" href="reservation.html">Reservation</a>
+        </ul>
+        <ul class="navbar-nav">
+            <a class="nav-link" href="filterhotels.html">Filter Hotels by type</a>
+        </ul>
+        <ul class="navbar-nav">
+            <a class="nav-link" href="allroomshotel.html">Specific Hotel Rooms</a>
+        </ul>
+    </div>
+</nav>
+<body>
+
+    <label for="hotelIdInput">Hotel ID:</label>
+    <input type="text" id="hotelIdInput">
+    <button onclick="getRooms()">Get Rooms</button>
+
+    <ul id="roomList"></ul>
+
+
+
+</body>
+</html>
