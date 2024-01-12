@@ -26,7 +26,7 @@ function displayRooms(rooms) {
 
     rooms.forEach(room => {
         var li = document.createElement("li");
-        li.textContent = `Room ID: ${room.id}, Room Number: ${room.roomNumber}, Beds: ${room.numberOfBeds}, Price: ${room.pricePerNight}`;
+        li.textContent = `Room ID: ${room.id}, Room Number: ${room.roomNumber}, Beds: ${room.numberOfBeds}`;
         roomListElement.appendChild(li);
     });
 }
