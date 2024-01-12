@@ -1,4 +1,9 @@
 const RESERVATIONS_URL = "http://localhost:8080/api/reservations/create";
+const DELETE_RESERVATION_URL = "http://localhost:8080/api/reservations/delete/";
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadReservations(); // Load reservations when the page loads
+});
 
 async function createReservation() {
     const reservationForm = document.getElementById("reservation-form");
@@ -23,6 +28,7 @@ async function createReservation() {
             console.log("Reservation created successfully:", createdReservation);
             // Optionally, you can update your UI or perform additional actions here
             alert("Reservation created successfully!");
+            loadReservations(); // Refresh the reservation list
         } else {
             console.error("Failed to create reservation. Status:", response.status);
             // Handle non-successful response (e.g., display an error message)
@@ -30,7 +36,46 @@ async function createReservation() {
         }
     } catch (error) {
         console.error("Error during reservation creation:", error);
-        // Handle any network or unexpected errors
-        alert("Error during reservation creation. Please try again later.");
+       
+    }
+}
+
+
+
+function deleteReservationConfirmation(reservationId) {
+    // Show the confirmation modal
+    const confirmationModal = new bootstrap.Modal(document.getElementById('delete-confirmation-modal'));
+    confirmationModal.show();
+
+    // Handle delete button click inside the modal
+    const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+    confirmDeleteBtn.addEventListener('click', async () => {
+        confirmationModal.hide();
+        await deleteReservation(reservationId);
+    });
+}
+async function deleteReservation() {
+    const reservationIdToDelete = document.getElementById("reservationIdToDelete").value;
+
+    if (!reservationIdToDelete) {
+        alert("Please enter a reservation ID.");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${DELETE_RESERVATION_URL}${reservationIdToDelete}`, {
+            method: "DELETE",
+        });
+
+        if (response.ok) {
+            alert("Reservation deleted successfully.");
+            loadReservations(); // Refresh the reservation list
+        } else {
+            console.error("Failed to delete reservation. Status:", response.status);
+            alert("Failed to delete reservation. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error during reservation deletion:", error);
+      
     }
 }
